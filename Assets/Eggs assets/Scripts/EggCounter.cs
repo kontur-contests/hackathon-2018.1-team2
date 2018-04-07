@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EggCounter : MonoBehaviour 
 {
-	private int eggCounter;
+	public int Counter;
 	// Use this for initialization
 	void Start () {
 		
@@ -19,13 +19,13 @@ public class EggCounter : MonoBehaviour
     {
 		if (collision.gameObject.name == "Egg")
         {
-			eggCounter += 1;
+			Counter++;
 			Destroy(collision.gameObject);
         }
     }
 
 	void OnGUI()
 	{
-		GUI.Box(new Rect(10, 10, 100, 25), "Eggs: " + eggCounter);
+		GUI.Box(new Rect(10, 10, 100, 25), "Eggs: " + Counter);
 	}
 }
