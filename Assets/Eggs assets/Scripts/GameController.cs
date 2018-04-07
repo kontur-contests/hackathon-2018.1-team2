@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class GameController : MonoBehaviour 
 {
+	private bool levelComplete = false;
 	private EggCounter x;
 	// Use this for initialization
 	void Start () 
@@ -15,16 +18,21 @@ public class GameController : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		
+		if (levelComplete) 
+		{
+			if (Input.GetKeyDown(KeyCode.Return))
+				SceneManager.LoadScene("Level_2");
+		}
 	}
 
 	void OnGUI()
 	{
-		//GUISkin = TextAlignment.Center;
 		if (x.Counter == 3) 
 		{
-			Debug.Log ("Victory");
-			GUI.Box (new Rect (100, 100, 200, 50), "Victory");
+			var boxWidth = 200;
+			var boxHeight = 25;
+			GUI.Box(new Rect (Screen.width/2 - boxWidth/2, Screen.height/2 - boxHeight*3, boxWidth, boxHeight), "Victory!");
+			levelComplete = true;
 		}
 	}
 }
