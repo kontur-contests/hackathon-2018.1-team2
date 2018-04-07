@@ -1,4 +1,5 @@
 ﻿
+<<<<<<< HEAD
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Plugins", "Game.Plugins.csproj", "{96EA980B-FC32-D677-1019-40B688E6AD79}"
@@ -6,6 +7,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game.csproj", "{3400B0F8-652C-1691-E7C8-9D85B1E4B2AC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Editor.Plugins", "Game.Editor.Plugins.csproj", "{8B4ECB31-EA36-32B2-8136-053A7514D4A9}"
+=======
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Assembly-CSharp.csproj", "{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}"
+>>>>>>> remotes/origin/master
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +19,7 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
 		{96EA980B-FC32-D677-1019-40B688E6AD79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96EA980B-FC32-D677-1019-40B688E6AD79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96EA980B-FC32-D677-1019-40B688E6AD79}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -25,6 +32,12 @@ Global
 		{8B4ECB31-EA36-32B2-8136-053A7514D4A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B4ECB31-EA36-32B2-8136-053A7514D4A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B4ECB31-EA36-32B2-8136-053A7514D4A9}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> remotes/origin/master
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
