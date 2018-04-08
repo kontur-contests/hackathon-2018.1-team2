@@ -20,7 +20,6 @@ public class EggCounter : MonoBehaviour
 		if (collision.gameObject.name == "Egg")
         {
 			Counter++;
-			//Destroy(collision.gameObject);
         }
     }
 
@@ -29,7 +28,6 @@ public class EggCounter : MonoBehaviour
 		if (collision.gameObject.name == "Egg")
 		{
 			Counter--;
-			//Destroy(collision.gameObject);
 		}
 	}
 

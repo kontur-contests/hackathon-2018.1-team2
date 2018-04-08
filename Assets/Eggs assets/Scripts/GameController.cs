@@ -44,8 +44,8 @@ public class GameController : MonoBehaviour
 			{
 				switch (SceneManager.GetActiveScene().name) 
 				{
-				case "Level_1":
-					SceneManager.LoadScene ("Level_2");
+					case "Level_1":
+						SceneManager.LoadScene ("Level_2");
 						break;
 					case "Level_2":
 						SceneManager.LoadScene ("Level_3");
