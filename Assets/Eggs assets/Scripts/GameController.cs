@@ -20,7 +20,8 @@ public class GameController : MonoBehaviour
 		{
 			{ "Level_1", 3 },
 			{ "Level_2", 2 },
-			{ "Level_4", 4 }
+            { "Level_3", 1 },
+            { "Level_4", 4 }
 		};
 	}
 	
@@ -47,11 +48,12 @@ public class GameController : MonoBehaviour
 					SceneManager.LoadScene ("Level_2");
 						break;
 					case "Level_2":
-						SceneManager.LoadScene ("Level_4");
+						SceneManager.LoadScene ("Level_3");
 						break;
-					//case: "Level_3"
-					//	SceneManager.LoadScene("Level_4")
-				}
+					case "Level_3":
+                        SceneManager.LoadScene ("Level_4");
+                        break;
+                }
 			}
 		}
 	}
