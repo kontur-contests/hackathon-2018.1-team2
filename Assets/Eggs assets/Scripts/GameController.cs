@@ -7,27 +7,64 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour 
 {
+	private static bool created = false;
 	private bool levelComplete = false;
-	private EggCounter x;
+	private Dictionary<string, int> eggGoals;
+	private EggCounter eggCounter;
+	
 	// Use this for initialization
 	void Start () 
 	{
-		x = FindObjectOfType<EggCounter>();
+		eggCounter = FindObjectOfType<EggCounter>();
+		eggGoals = new Dictionary<string, int> 
+		{
+			{ "Level_1", 3 },
+			{ "Level_2", 2 },
+			{ "Level_4", 4 }
+		};
 	}
+	
+	void Awake()
+    {
+        if (!created)
+        {
+            DontDestroyOnLoad(this.gameObject);
+            created = true;
+            Debug.Log("Awake: " + this.gameObject);
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () 
 	{
 		if (levelComplete) 
 		{
-			if (Input.GetKeyDown(KeyCode.Return))
-				SceneManager.LoadScene("Level_2");
+			if (Input.GetKeyDown (KeyCode.Return)) 
+			{
+				switch (SceneManager.GetActiveScene().name) 
+				{
+				case "Level_1":
+					SceneManager.LoadScene ("Level_2");
+						break;
+					case "Level_2":
+						SceneManager.LoadScene ("Level_4");
+						break;
+					//case: "Level_3"
+					//	SceneManager.LoadScene("Level_4")
+				}
+			}
 		}
+	}
+
+	void OnLevelWasLoaded()
+	{
+		Debug.Log (SceneManager.GetActiveScene().name);
+		eggCounter = FindObjectOfType<EggCounter>();
 	}
 
 	void OnGUI()
 	{
-		if (x.Counter == 3) 
+		if (eggCounter.Counter == eggGoals[SceneManager.GetActiveScene().name]) 
 		{
 			var boxWidth = 200;
 			var boxHeight = 25;

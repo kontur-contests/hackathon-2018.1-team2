@@ -20,9 +20,18 @@ public class EggCounter : MonoBehaviour
 		if (collision.gameObject.name == "Egg")
         {
 			Counter++;
-			Destroy(collision.gameObject);
+			//Destroy(collision.gameObject);
         }
     }
+
+	void OnCollisionExit2D(Collision2D collision)
+	{
+		if (collision.gameObject.name == "Egg")
+		{
+			Counter--;
+			//Destroy(collision.gameObject);
+		}
+	}
 
 	void OnGUI()
 	{
