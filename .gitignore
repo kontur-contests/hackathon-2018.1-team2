@@ -35,6 +35,7 @@ sysinfo.txt
 # ============ #
 .DS_Store*
 ._*
+*.exe
 .Spotlight-V100
 .Trashes
 Icon?
@@ -67,3 +68,5 @@ NetworkManager.asset
 ScriptMapper
 unity default resources
 unity editor resources
+UnityPlayer.dll
+EasterEggs_Data/
